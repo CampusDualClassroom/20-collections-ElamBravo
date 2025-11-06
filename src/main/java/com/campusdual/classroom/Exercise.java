@@ -1,14 +1,26 @@
 package com.campusdual.classroom;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise {
 
     public static List<Person> getPeopleList() {
+        List<Person> peopleList = new ArrayList<>();
+
+        peopleList.add(new Person("John", "Smith"));
+        peopleList.add(new Teacher("Maria", "Montessori", "Education"));
+        peopleList.add(new PoliceOfficer("Jake","Peralta", "B-99"));
+        peopleList.add(new Doctor("Gregory", "House", "Neurology e infectology"));
+
+        return peopleList;
 
     }
 
     public static void showPeopleDetails(List<Person> stringList) {
+        for (Person person : stringList){
+            person.getDetails();
+        }
 
     }
 
